@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+@media (min-width: 510px) {
+    .mobile-container {
+        display: none;
+    }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#mobile-search-div{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 50px;
+}
+#mobile-search-form{
+    font-size: 20px;
+    width: 300px;
+    padding: 10px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 30px;
+    border: none;
+}
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #FFFFFF;
+  color: white;
+  border-radius: 10px;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: #FFFFFF;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #FFFFFF;
+  color: black;
+  height: 25px;
+}
+
+hr{
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active"></a>
+  <hr>
+  <div id="myLinks">
+    <div id="mobile-search-div">
+        <form method="get"  action="">
+          <input id="mobile-search-form" type="text"  name="s" id="s" value="" />
+          <input type="hidden" id="mobile-search-button" />
+      </form>
+    </div>
+    <a href="">Opnião</a>
+    <a href="">Região</a>
+	<a href="">Metrópoles</a> 
+    <a href="">Esporte</a>
+	<a href="">Política</a>
+	<a href="">Negócios</a>
+	<a href="">Saúde</a>
+    <a href="">Casa & Decor</a>
+    <hr>
+    <a href="">Sobre</a> 
+    <a href="">Fale conosco</a>
+    <hr>
+    <a href="">Siga o Fulado</a>
+
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+
+<!-- End smartphone / tablet look -->
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+</script>
+
+</body>
+</html>
